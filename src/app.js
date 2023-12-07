@@ -15,6 +15,8 @@ const paymentSaveRoute = require("./routes/payments/paymentSaveRoute");
 const createPaymentIntentRoute = require("./routes/payments/createPaymentIntentsRoute");
 const updateUserRoute = require("./routes/users/updateUserRoute");
 const getUserRoute = require("./routes/users/getUserRoute");
+const postContentsRoute = require("./routes/courseContents/postContentsRoute");
+const getContentsRoute = require("./routes/courseContents/getContentsRoute");
 
 
 
@@ -34,6 +36,10 @@ app.use(getUserRoute);
 app.use(postCourseRoute);
 app.use(getAllCourseRoute);
 app.use(getOneCourseRoute);
+
+// course contents related api routes
+app.use(postContentsRoute);
+app.use(getContentsRoute);
 
 // payments related api routes
 app.use(paymentSaveRoute);

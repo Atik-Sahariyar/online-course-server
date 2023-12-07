@@ -1,9 +1,10 @@
 const express = require('express');
 const Payments = require('../../models/Payments/Payments');
+const verifyToken = require('../../middlewares/verifyToken');
 const paymentSaveRoute = express.Router();
 
 
-paymentSaveRoute.post('/payments', /* verifyToken, */ async(req, res) => {
+paymentSaveRoute.post('/payments', verifyToken, async(req, res) => {
     
     const paymentInfo = await req.body; 
     const payment  = new Payments(paymentInfo);

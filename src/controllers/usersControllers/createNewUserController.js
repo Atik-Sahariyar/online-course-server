@@ -11,7 +11,7 @@ const createNewUserController = async (req, res) => {
       }
       const newUser  = new Users(user);
       const result = await newUser.save();
-      res.status(200).json(result);
+      res.send(result);
     } catch (error) {
       console.error('Error  post user data:', error);
       res.status(500).json({ message: 'Internal server error' });

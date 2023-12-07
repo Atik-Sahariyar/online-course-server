@@ -4,6 +4,6 @@ const getAdminController = require('../../controllers/usersControllers/getAdminC
 const verifyToken = require('../../middlewares/verifyToken');
 
 
-getAdminRoute.get('/users/admin/:email', verifyToken, getAdminController);
+getAdminRoute.get('/users/admin/:email',/*  verifyToken, */ getAdminController);
 
 module.exports = getAdminRoute;
