@@ -4,7 +4,6 @@ const getAdminController = async (req, res) => {
 
    try{
     const email = req.params.email;
-    console.log(email);
     // if (email !== req.decoded.email) {
     //   return res.status(403).send({ message: 'forbidden access' })
     // }
